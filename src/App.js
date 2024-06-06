@@ -59,13 +59,13 @@ function App() {
   const getWeatherIconUrl = (main) => {
     switch (main) {
       case "Clear":
-        return "/sun.png"; // Path to your sunny weather icon
+        return "/sun.png"; 
       case "Rain":
-        return "/thunder.png"; // Path to your rainy weather icon
+        return "/thunder.png";
       case "Snow":
-        return "/snowy.png"; // Path to your snowy weather icon
+        return "/snowy.png"; 
       case "Haze":
-        return "/sun.png"; // Path to your haze weather icon
+        return "/sun.png"; 
         case "Clouds":
           return "/thunder.png";
       default:
@@ -84,7 +84,6 @@ function App() {
             <h1 className="container_date">{formattedDate}</h1>
             <div className="weather_data">
               <h2 className="container_city">{weatherData.name}</h2>
-              {/* <img className="container_img" src="/thunder.png" width="180px" alt="sss"/> */}
               <img className="container_img" src={getWeatherIconUrl(weatherData.weather[0].main)} width="180px" alt="Weather Icon" />
               <h2 className="container_degree">{weatherData.main.temp}</h2>
               <h2 className="country_per">{weatherData.weather[0].main}<span className="degree_icon"></span></h2>
